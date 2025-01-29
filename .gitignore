@@ -5,6 +5,9 @@ images/
 simulations/
 vendor/
 logo/
-
+composer.json
+composer.lock
+TestFlow.session.properties
+TestFlow.session.script
 
 
