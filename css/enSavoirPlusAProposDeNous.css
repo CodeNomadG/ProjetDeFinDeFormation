@@ -1,0 +1,907 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    /* font-family: 'Tw Cen MT', sans-serif; */
+}
+
+body, html {
+    height: 577vh; 
+    overflow-x: hidden; 
+    width: 100vw;
+    font-family: 'Tw Cen MT', sans-serif;
+    margin: 0;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e1e0dee8; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 0px 5px 40px;  
+    
+}
+
+/**Menu burger**/
+.mobile-menu {
+    width: 100%;
+    font-size: 30px;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    z-index: 9999;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    display: none;
+    /* display: block; */
+}
+
+/* .container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 40px 5px 40px;
+} */
+
+
+
+/** Bar de navigation**/
+
+.menu .logo {
+    width: 120px;
+    cursor: pointer;
+    
+   
+}
+
+/* header .logo {
+    width: 120px;
+    cursor: pointer;
+
+} */
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    text-align: right;
+    list-style: none;
+    padding: 10px 20px;
+    margin-left: 80px;
+}
+
+ul li {
+    margin-left: 10px;
+}
+
+ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ef7a4c;
+    font-size: 16px;
+    position: relative;
+}
+
+ul li a::after {
+    content: '';
+    background: #ffa400;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 3px;
+    transform: translateX(50%);
+    transition: width 0.3s ease;
+}
+
+ul li a:hover::after {
+    width: 38%;
+}
+
+.container {
+    margin: 48px 0 auto 0;
+    position: relative;
+    height:155vh;
+   
+    width: 100%;
+    
+    background-size: cover;
+    background-position: center;
+    /* padding: 0 8%; */
+    
+}
+
+.site-container {
+
+    position: relative;
+    bottom: 10%;
+    color: #000;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-right: 50px; */
+    padding-top: 110px;
+
+    
+}
+
+/* .site-container h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: 0px 15px;
+    line-height: 120px;
+    padding-top: 50px;
+    color: #000;
+    background-clip: text; 
+    background-position: 0 0;
+    animation: animate 20s linear infinite alternate;
+} */
+
+@keyframes animate {
+    100% {
+        background-position: -500px;
+    }
+}
+
+.site-container p {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.site-container .row{
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    margin: 0 75px 0 75px;
+    
+    /* width: fit-content; */
+}
+
+.row a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+.row fieldset{
+    border-style: none;
+}
+
+.row fieldset form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f5f9fb70;
+    border-style: hidden;
+    border-radius: 10px;
+  
+    padding: 30px 30px 15px 30px;
+    position: relative;
+    margin-top: 100px ;
+    /* margin: 50px 150px 50px 150px; */
+    gap: 0px;
+}
+
+.row label{
+    font-size: 20px;
+    color: #3a81bc;
+    font-style: oblique;
+    font-weight: 600;
+    margin: 0 0 0 5px;
+}
+
+.row input {
+    /* width: 100%; */
+    font-size: 20px;
+    height: 50px;
+    /* padding-left: 20px; */
+    border-radius: 10px;
+    margin-bottom: 15px; /* Add some space between input fields */
+}
+
+.row textarea {
+    width:100%;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px 0 0 20px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+input.element-bouton{
+    margin-top: 30px;
+    width: 15%;
+    height: 34px;
+    align-self: center;
+    /* padding: 20px; */
+    /* height: 30px; */
+    background-color: transparent;
+    color: #3a81bc;
+
+    font-size: 20px;
+}
+
+input.element-bouton:hover{
+    
+    height:40px ;
+    font-size: 25px;
+    width: 20%;
+    color: #fff;
+    background-color: #3a81bc;
+    transition: 0.5s;
+}
+
+.social-icons {
+    /* position: absolute; */
+    /* right: 5%;
+    bottom: -3px;
+    gap: 20px; */
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 40px;
+    
+ }
+
+.social-icons img {
+    width: 40px;
+    margin: 20px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.social-icons a{
+    color: #3a81bc;
+    
+    font-size: 30px; 
+    margin: 0 15px;   
+}
+
+.social-icons a:hover{
+    color: #5a5757;
+    
+    font-size: 30px; 
+    margin: 0 15px;   
+}
+
+
+
+.footer {
+    background-color: #917a6f; 
+    color: #333; 
+    text-align: center;
+    
+    padding: 20px  ; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px; 
+    border-top: 1px solid #ddd; 
+  }
+  
+
+
+
+  /** MODE SOMBRE **/
+    /*Bouton*/
+
+    #theme-toggle {
+        position: fixed;
+        font-size: 20px ;
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 10px;
+        background-color: #00000004;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000; 
+    }
+    
+    #theme-toggle:hover {
+        background-color: #333;
+    }
+
+  /* Styles par défaut pour le mode clair */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+a {
+    color: #0000ff;
+}
+
+    /* Mode sombre */
+    .dark-mode{
+        background-color: #121212;
+        color: #ffffff; 
+    }
+    .dark-mode .container nav {
+        background-color: #121212;
+        color: #ffffff;
+    }
+    
+    .dark-mode a {
+        color: #fbfafc;
+    }
+    
+
+    .dark-mode .card-salaries-infos{
+        background-color: #121212;
+        color: #ffffff; 
+    }
+    .dark-mode .card-content-salaries-infos h2{
+        color: #fff;
+    }
+    .dark-mode .card-content-salaries-infos p {
+        color: #fff;
+    }
+    .dark-mode .card-content-salaries-infos #Lparagraphe {
+        color: #fff;
+    }
+    .dark-mode .mobile-menu{
+        color: #fff;
+    }
+    /*Fin du style dark-mode*/
+    
+
+
+/*style pour la page vous_etes_salaries*/
+/* Style de la carte des informations sur les salariés */
+.card-salaries-infos {
+    /* margin: 20px; */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: auto; /* Ajustez la largeur selon vos besoins */
+    overflow: hidden; /* Empêche le contenu de déborder */
+
+    position: relative;
+}
+
+/*img_accueil_card-salaries-infos*/
+
+.card-salaries-infos img {
+    max-width: 100%;
+
+    width: 100%;
+    /* height: 800px; */
+    /* max-height: 400px; */
+
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-top: 77px;
+
+    display: block;
+}
+
+/* Style de l'image */
+.card-content-salaries-infos img {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+    /* width: 500px;  */
+    background-size: 180%;
+}
+
+
+/* Style du contenu de la carte */
+.card-content-salaries-infos {
+    text-align: center;
+}
+
+/* Style des titres */
+.card-content-salaries-infos h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    align-items: center;
+    margin-inline: 5px;
+
+    text-decoration: underline 3px solid #b9773a;
+    
+}
+
+/* Style des paragraphes */
+.card-content-salaries-infos p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.5;
+    /* margin-bottom: 0px; */
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    
+    margin:0 60px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 90%;
+    /* height: 100%; */
+    /* width: 100%; */
+}
+.card-content-salaries-infos #Lparagraphe{
+    font-size: 20px;
+    color: #666;
+    line-height: 1.5;
+    /* margin-bottom: 0px; */
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    
+    margin:0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 90%;
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+/* Style du bouton */
+.card-content-salaries-infos button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    margin-block: 50px;
+    margin-inline: 15px;
+    /* width: 100%; */
+}
+
+/* Style du lien dans le bouton */
+.card-content-salaries-infos button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.image-container {
+    /* position: relative;
+    display: inline-block;  */
+
+    position: relative;
+    margin-top:25px;
+    height:400px;
+
+    width: 100%;
+    background: url('../images/sableGalet.jpg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0% 0%;
+}
+
+/* .image-container img {
+    background-size: 180%;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 5% 5%;
+} */
+
+.image-container h1 {
+    position: absolute;
+    top: 45%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centre le texte exactement au milieu */
+    color: white; /* Change la couleur du texte */
+    font-size: 4rem; /* Ajustez la taille selon vos besoins */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre portée pour une meilleure lisibilité */
+    margin: 0;
+    width: 100%;
+
+    /* font-size: 50px; */
+    text-align: center;
+    margin: 0px 15px;
+    line-height: 120px;
+    /* padding-top: 50px; */
+    /* color: #000; */
+    background-clip: text; 
+    background-position: 0 0;
+    
+}
+
+@media (max-width: 882px) {
+    
+
+    body, html {
+        height: 425vh; 
+        overflow-x: hidden; 
+        
+        width: 100vw;
+        /* font-family: 'Tw Cen MT', sans-serif; */
+    
+    }
+
+    .container {
+        position: relative;
+        margin-top:0;
+        height:150vh;
+
+        width: 100%;
+        /* background: linear-gradient(rgba(25, 128, 192, 0.492), rgba(0, 0, 0, 0.1)), url('../images/sendMsg.png'); */
+        background-size: 180%;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0% 0%;
+    }
+    
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh; 
+        box-sizing: border-box;
+        
+        padding: 100px 0px 0px 0px;
+        background-color: #e1e0dee8; 
+        
+        gap:150px;
+        display: none;
+        
+    }
+
+    .menu.active{
+        display: flex;
+    }
+
+    .menu .logo {
+
+        /* flex: 1 0 100%; */
+        margin-top: 0px;
+        margin-inline: 120px;
+       
+        width: 150px;
+        /* sjustify-content: center; */
+        /* z-index: 9999; */
+        /* position: relative; */
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        align-items: center; 
+    }
+
+
+
+    /* .container{
+        padding: 0px 0px;
+    } */
+
+    .container nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px; 
+        margin: 00px 0px 0 0; 
+        
+    }
+
+    .container nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0; 
+       
+        /* display: none; */
+        /* display: block; */
+    }
+
+    .container ul li a {
+        box-sizing: border-box;
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .mobile-menu {    
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        position: fixed; 
+        right: 30px;
+        width: 50px; 
+        height: 50px; 
+        font-size: 30px; 
+        padding: 30px 0px 0 0 ; 
+        
+        color: #000; 
+        border-radius: 50%; 
+        
+        z-index: 9999; 
+        cursor: pointer; 
+        box-sizing: border-box; 
+    
+        /* display: block; */
+    
+        }
+    
+
+       
+        /* Style pour le logo */
+   
+    .site-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px 0 0 0 ;
+       
+        bottom: 10%;
+        align-items: center;
+        
+
+        /* width: 100%; */
+        
+    }
+
+    .site-container h3 {
+        font-size: 25px;
+        margin: 0px 0px;
+        font-weight: bold;
+
+        ;
+    }
+
+    .site-container h1 {
+        /* width: fit-content; */
+       
+        font-size: 40px;
+        /* margin: 0px 5px 30px 5px; */
+        line-height: 1.6;
+        /* padding-top: 40px; */
+        /* margin-top: 30px; */
+        /* padding-bottom: 50px; */
+        color: #000;
+        /* background: linear-gradient(rgba(25, 128, 192, 0.492), rgba(0, 0, 0, 0.1)), url('../images/sendMsg.png'); */
+        background-clip: text; 
+        background-position: 0 0;
+        animation: animate 20s linear infinite alternate;
+    }
+    
+    @keyframes animate {
+        100% {
+            background-position: -500px;
+        }
+    }
+    
+    .site-container p {
+        /* font-size: 50px;
+        font-weight: bold; */
+    
+        font-size: 25px;
+        /* margin: 0px 25px 10px 0; */
+        font-weight: 500;
+   
+        /* text-align: justify; */
+        text-align: center;
+
+        padding: 0 10px;
+        
+    }
+
+
+    .row fieldset{
+        border-style: none;
+        width: 350px;
+        margin: 50px;
+  
+    }
+
+    .row fieldset form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #f5f9fb70;
+        border-style: hidden;
+        border-radius: 10px;
+      
+        padding: 10px 10px 15px 10px;
+        position: relative;
+        margin-top: 30px ;
+        margin-inline: 0px;
+        /* margin: 0px 10px 0px 10px; */
+        gap: 0px;
+
+       
+    }
+
+    .image-container {
+        /* position: relative;
+        display: inline-block;  */
+    
+        position: relative;
+        margin-top:0px;
+        height:250px;
+    
+        width: 100%;
+        background: url('../images/sableGalet.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top;
+        padding: 5% 5%;
+    }
+    
+    /* .image-container img {
+        width: 100%; 
+        height: auto; 
+    } */
+    
+    .image-container h1 {
+        /* position: absolute; */
+        top: 50%; 
+        /* left: 50%;  */
+        transform: translate(-50%, -50%); /* Centre le texte exactement au milieu */
+        color: #fff; /* Change la couleur du texte */
+        font-size: 2rem; /* Ajustez la taille selon vos besoins */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre portée pour une meilleure lisibilité */
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+
+
+    .row label{
+        font-size: 20px;
+        color: #3a81bc;
+        font-style: oblique;
+        font-weight: 600;
+        margin: 0 0 0 5px;
+    }
+    
+    .row input {
+        width: 100%;
+        font-size: 20px;
+        height: 50px;
+        /* padding-left: 20px; */
+        border-radius: 10px;
+        margin-bottom: 15px; /* Add some space between input fields */
+    }
+    
+    .row textarea {
+        width:100%;
+        height: 150px;
+        border-radius: 10px;
+        padding: 10px 0 0 20px;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+    
+    input.element-bouton{
+        margin-top: 30px;
+        width: 50%;
+        height: 34px;
+        align-self: center;
+        /* padding: 20px; */
+        /* height: 30px; */
+        background-color: transparent;
+        color: #3a81bc;
+    
+        font-size: 20px;
+    }
+
+    input.element-bouton:hover{
+    
+        height:40px ;
+        font-size: 25px;
+        width: 60%;
+        color: #fff;
+        background-color: #3a81bc;
+        transition: 0.5s;
+    }
+
+
+
+    .card-salaries-infos img {
+        display: block;
+        width: 100%; /* Permettre à l'image de conserver son ratio d'aspect */
+        max-width: 100%; /* Limiter la largeur de l'image au maximum disponible */
+        height: auto; /* Permettre à l'image de conserver son ratio d'aspect */
+        margin: 0 auto; /* Centrer l'image horizontalement */
+        border-radius: 5px;
+        
+    } 
+
+
+ /*pour la page qui sommenous*/
+ .title-on-image_bis {
+
+    position: absolute;
+
+    
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: -2px 0px 0px  rgb(231, 109, 27);
+    font-size: 7vw; /* Taille de la police relative à la largeur de la vue */
+    text-align: center;
+    z-index: 1; /* Assure que le titre est placé au-dessus de l'image */
+}
+
+    /* Style de l'image */
+.card-content-salaries-infos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    /* width: 500px;  */
+    background-size: 180%;
+} 
+.card-salaries-infos {
+    /* margin: 20px; */
+    padding: 0px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: auto; /* Ajustez la largeur selon vos besoins */
+    overflow: hidden; /* Empêche le contenu de déborder */
+
+    position: relative;
+}
+
+/* Style du contenu de la carte */
+.card-content-salaries-infos {
+    text-align: center;
+} 
+
+/* Style des titres */
+.card-content-salaries-infos h2 {
+    font-size: 25px;
+    color: #333;
+    /* margin-bottom: 20px; */
+    text-align: center;
+ /* margin-inline: 5px; */
+    text-decoration: underline 3px solid #b9773a;
+    max-width: 100%;
+
+    /* margin:0px 3px 0 0px; */
+    margin:0px 10px 20px 10px;
+}
+
+/* Style des paragraphes */
+.card-content-salaries-infos p {
+    font-size: 15px;
+    /* color: #666; */
+    line-height: 1.5;
+   
+    text-align: justify; 
+    /* max-width: 100%;  */
+    margin:0 20px;
+    padding: 0 10px;  
+    box-sizing: border-box;
+    /* margin:0 0px 0 ; */
+    /* width: 375px;  */
+} 
+
+}

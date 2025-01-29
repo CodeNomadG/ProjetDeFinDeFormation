@@ -1,0 +1,246 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 150px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+}
+
+header ul li a:hover {
+    background-color: #e7653e;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* Site Container */
+.site-container {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.site-container h3 {
+    font-size: 24px;
+    color: #e7653e;
+}
+
+.site-container h1 {
+    font-size: 48px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.site-container p {
+    margin: 20px 0;
+    font-size: 18px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-container .row {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.site-container .row a {
+    text-decoration: none;
+    background-color: #e7653e;
+    color: #fff;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.site-container .row a:hover {
+    background-color: #333;
+}
+
+#row-bis {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e7653e;
+}
+
+/* Section Styles */
+.section-1, .section-2, .section-3 {
+    padding: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.section-1 .etudeDuFlow, .section-1 .aProposDeNous, 
+.section-2 .devis, .section-3 .Equipe, 
+.section-3 .FoireAuxQuestions {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-1 h1, .section-2 h1, .section-3 h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-1 p, .section-2 h3, .section-3 p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.buttons a, .buttons-devis a, .row-1 a, .row-2 a, .row-4 a, .row-5 a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #e7653e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons a:hover, .buttons-devis a:hover, .row-1 a:hover, 
+.row-2 a:hover, .row-4 a:hover, .row-5 a:hover {
+    background-color: #333;
+}
+
+/* Fieldset and FAQ Styles */
+.FoireAuxQuestions fieldset {
+    border: 2px solid #e7653e;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.FoireAuxQuestions h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.FoireAuxQuestions p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.FoireAuxQuestions fieldset:hover {
+    border-color: #333;
+    background-color: #f4f4f4;
+}
+
+.hidden-text-accordeon {
+    display: none;
+    font-size: 14px;
+    color: #666;
+}
+
+.text-container-accordeon h1:hover + .hidden-text-accordeon {
+    display: block;
+}
+
+/* Button and Footer */
+button#theme-toggle {
+    background-color: #e7653e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#theme-toggle:hover {
+    background-color: #333;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    .site-container h1 {
+        font-size: 36px;
+    }
+
+    .site-container .row a {
+        padding: 10px 20px;
+    }
+
+    .section-1, .section-2, .section-3 {
+        padding: 30px 10px;
+    }
+
+    .FoireAuxQuestions fieldset {
+        padding: 15px;
+    }
+}

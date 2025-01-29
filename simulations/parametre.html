@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres de Mon Compte</title>
+    <link rel="stylesheet" href="parametre.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Paramètres de Mon Compte</h1>
+        <form id="settingsForm">
+            <!-- Informations Personnelles -->
+            <h2>Informations Personnelles</h2>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" required>
+            <label for="phone">Numéro de téléphone :</label>
+            <input type="tel" id="phone">
+            <button type="button" onclick="changePassword()">Changer le mot de passe</button>
+
+            <!-- Préférences de Notification -->
+            <h2>Préférences de Notification</h2>
+            <label><input type="checkbox" id="emailNotifications"> Recevoir des notifications par e-mail</label><br>
+            <label><input type="checkbox" id="smsNotifications"> Recevoir des notifications par SMS</label><br>
+            <label><input type="checkbox" id="pushNotifications"> Recevoir des notifications push</label><br>
+
+            <!-- Confidentialité -->
+            <h2>Confidentialité</h2>
+            <label>Visibilité du profil :</label><br>
+            <label><input type="radio" name="profileVisibility" value="public"> Public</label><br>
+            <label><input type="radio" name="profileVisibility" value="private"> Privé</label><br>
+            <label><input type="checkbox" id="twoFactor"> Activer l'authentification à deux facteurs</label><br>
+
+            <!-- Langue et Localisation -->
+            <h2>Langue et Localisation</h2>
+            <label for="language">Langue :</label>
+            <select id="language">
+                <option value="fr">Français</option>
+                <option value="en">Anglais</option>
+                <option value="es">Espagnol</option>
+            </select>
+            <label for="timezone">Fuseau horaire :</label>
+            <select id="timezone">
+                <option value="UTC">UTC</option>
+                <option value="UTC+1">UTC+1</option>
+                <option value="UTC-5">UTC-5</option>
+            </select>
+
+            <!-- Supprimer le Compte -->
+            <h2>Supprimer le Compte</h2>
+            <p><strong>Avertissement :</strong> Cette action est irréversible.</p>
+            <button type="button" id="deleteAccount">Supprimer mon compte</button>
+
+            <!-- Bouton de Sauvegarde -->
+            <button type="submit">Sauvegarder les Modifications</button>
+        </form>
+        <p id="message" class="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

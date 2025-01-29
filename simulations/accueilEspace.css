@@ -1,0 +1,187 @@
+/* Global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #4A90E2;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dashboard {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eceff1;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    font-size: 1.1em;
+    color: #4A90E2;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #e4f0fb;
+    border-radius: 4px;
+}
+
+/* Section Well-being Summary */
+.wellbeing-summary {
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #eef7ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card progress {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1.2em;
+}
+
+/* Goals Section */
+.goals {
+    margin-top: 30px;
+}
+
+.goal {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-left: 4px solid #4A90E2;
+    border-radius: 6px;
+}
+
+.goal h3 {
+    margin-bottom: 10px;
+}
+
+.goal progress {
+    width: 100%;
+}
+
+/* Agenda Section */
+.agenda {
+    margin-top: 30px;
+}
+
+.agenda ul {
+    list-style: none;
+    padding: 0;
+}
+
+.agenda ul li {
+    padding: 10px 0;
+    font-size: 1.1em;
+    border-bottom: 1px solid #eceff1;
+}
+
+.agenda ul li em {
+    color: #888;
+    font-style: italic;
+}
+
+/* Activities Section */
+.activities {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.activity {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 30%;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.activity h3 {
+    margin-bottom: 10px;
+}
+
+.activity p {
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4A90E2;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #357ABD;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .activities {
+        flex-direction: column;
+    }
+
+    .activity {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    header nav ul li {
+        margin-left: 10px;
+    }
+
+    .card p {
+        font-size: 1em;
+    }
+
+    .goal progress {
+        width: 100%;
+    }
+}

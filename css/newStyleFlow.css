@@ -1,0 +1,1226 @@
+/*style pour la page*/
+
+
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style pour le corps de la page */
+body {
+    height:auto;
+    margin-inline: 0px;
+    padding-top: 0px;
+    background-color: #f2f2f2;
+    /* height: 400vw; */
+    /* max-height: 100px; */
+}
+
+/* Style pour l'en-tête */
+header {
+    width: 100%; /* Le header occupera toute la largeur de l'écran */
+ 
+    position: fixed;
+    font-family: "Syne", sans-serif;
+    /* font-weight: 200px; */
+    background-color: #e9edf1;
+    padding: 15px 40px;
+    padding-inline: 70px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; /* Assurez-vous que la barre de navigation est au-dessus du reste du contenu */
+}
+
+.header_h img {
+    max-width: 150px;
+}
+
+/* Style pour la bar de navigation */
+.navbar {
+    display: block;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    justify-content: space-between;
+}
+
+ul{
+    max-width: 100%;
+    width: 100%;
+}
+
+li{
+    margin-inline: 20px;
+}
+
+.custom-dropdown {
+    cursor: pointer;
+    position: relative;
+    color: #f16e17;
+    position: relative;
+    margin-right: 10px; /* Espacement entre les éléments */
+    /* margin-right: 25px; */
+}
+
+.dropdown-header {
+    cursor: pointer;
+}
+.dropdown-header:hover {
+    /* font-weight:600; */
+    
+    color: #a74e12;
+    border-bottom: 3px solid #a74e12; /* Épaissir la ligne au survol */
+}
+
+.dropdown-options {
+    position: absolute;
+    width: 190px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-top: none;
+    border-radius: 0 10px 10px 10px;
+    background-color: #ffffffe8;
+}
+
+.custom-dropdown:hover .dropdown-options {
+    display: block;
+}
+
+.dropdown-options li {
+    margin: 0;
+    padding: 10px;
+}
+
+.dropdown-options li:hover {
+    /* background-color: #f16e175b; */
+    /* width: 190px; */
+    width: auto;
+    border-bottom: 3px solid #a74e12; /* Épaissir la ligne au survol */
+    margin: 0;
+    color:#a74e12 ; 
+    margin-block: 10px;
+    
+}
+
+/* Style pour les liens */
+nav a {
+    text-decoration: none;
+    color: #f16e17;
+}
+
+nav a:hover {
+    color: #a74e12;
+    border-bottom: 3px solid #a74e12;
+}
+
+/* Style pour le menu mobile */
+.mobile-menu {
+    display: none;
+}
+
+/* Style pour le formulaire */
+#inscription-form {
+    
+    width: 500px;
+    margin: 200px auto;
+    padding: 20px;
+    padding-inline: 60px;
+    background-color: rgba(255, 255, 255, 0.665);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+/* Style pour le bloc de connexion  */
+#Connexion-form {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    padding-inline: 60px;
+    background-color: rgba(255, 255, 255, 0.665);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/**/
+
+/* Positionnement */
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+
+}
+
+fieldset {
+    border: none;
+    padding: 0px;
+    margin: 0;
+    /* width: 100%; */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+   width: 100%;
+  
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #dd6c21b0; 
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    
+
+}
+
+input[type="submit"] {
+    width: 51%;
+    padding: 10px;
+    /* margin-inline: 108px ; */
+    margin: 0 auto; /* cela va centrer horizontalement */
+    display: block; /* assurez-vous qu'il occupe toute la largeur disponible */
+    
+
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600px;
+    font-style: normal;
+
+    border: none;
+    border-radius: 5px;
+    background-color: #db6414c2;
+    color: #0e1044ad;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input:hover[type="submit"] {
+    background-color: #e87714ad; /* Nouvelle couleur de fond au survol */
+    color: #a74e12; /* Nouvelle couleur du texte au survol */
+}
+/* Style pour les messages d'erreur */
+.error {
+    color: #ffffff;
+    background-color:#8e2d2d;
+    ;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+   
+}
+
+/* Style pour le bouton d'affichage du mot de passe */
+.password-field i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Ajustement pour le conteneur des champs de mot de passe */
+.password-field,
+.password-field-2 {
+    position: relative;
+}
+
+/* Ajustement pour les icônes des yeux */
+.password-field i,
+.password-field-2 i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #161e44;
+}
+
+.password-field i,
+.password-field-2 i:hover{
+    
+    color: #dd6c21;
+}
+
+.password-field i.fa-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #161e44;
+}
+
+.password-field i.fa-eye:hover {
+   
+    color: #dd6c21;
+}
+
+/* Style pour le texte de poste */
+#error-poste {
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* Style pour le questionnaire de santé mentale */
+.questionnaire {
+   
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 50vh; /* Hauteur minimale équivalente à 50% de la hauteur de la fenêtre */
+    
+    /* Utilisation de flexbox pour centrer le contenu */
+    display: flex;
+    flex-direction: column; /* Contenu empilé verticalement */
+    justify-content: center; /* Centrage vertical */
+    align-items: center; /* Centrage horizontal */
+}
+
+.question {
+    margin-bottom: 20px;
+    text-align: center; /* Centrer le texte des questions */
+}
+
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center; /* Centrer le texte des paragraphes */
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column; /* Options de bouton radio empilées verticalement */
+    align-items: center; /* Centrage horizontal des options */
+}
+
+input[type="radio"] {
+ 
+    margin-bottom: 5px; /* Espacement entre les options */
+    font-size: 23px; /* Taille de la police agrandie */
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Les boutons sont placés à gauche et à droite */
+    width: 100%; /* Assurez-vous que les boutons occupent toute la largeur */
+    margin-top: 20px; /* Espacement entre les options de boutons et les boutons */
+}
+
+/* button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+} */
+
+/* button:hover {
+    background-color: #0056b3;
+} */
+
+button[type="submit"] {
+    background-color: #28a745;
+    /* Centrage horizontal du bouton Soumettre */
+    margin: 20px ; 
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+
+/*Style de la page AccueilFlow*/
+/*Style des paragraphes "cartes"*/
+
+
+
+.card {
+    margin-top: 0px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; 
+}
+.card img {
+    background-size:auto; 
+    width: 100%; 
+    height: 800px; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.card_2{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 50px;
+}
+
+
+
+
+.card_inscription_connexion img {
+    margin-top: 99px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 900px;
+ 
+    /* height: auto; */
+    display: block;
+}
+
+
+
+.card-content {
+    margin-top: 0px;
+    position: absolute; /* Changement de position à absolue */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #161e44; /* Couleur du texte */
+    padding: 20px; /* Ajout de rembourrage */
+    width: 100%; /* Largeur du contenu */
+    max-width: 100%; /* Largeur maximale du contenu */
+
+    padding-inline: 100px;
+}
+
+
+
+.card-content h1 {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    font-size: 70px; /* Réduction de la taille de la police */
+    font-weight: bold;
+    color: rgb(228, 99, 25);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Le texte est initialement transparent */
+    animation: fadeIn 1.5s forwards; /* Appliquer l'animation fadeIn */
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Le texte commence transparent */
+    }
+    to {
+        opacity: 1; /* Le texte devient opaque à la fin de l'animation */
+    }
+}
+
+.card-content h2 {
+    margin-top: 0px; /* Supprime toute marge supérieure */
+    text-align: left;
+    line-height: 2; /* Définit l'espacement entre les lignes à 2 fois la taille de la police */
+    text-shadow: -2px 0px 0px rgb(231, 109, 27); /* Ajoute un effet d'ombre */
+    color: #fff; /* Définit la couleur du texte en blanc */
+    font-size: 40px; /* Définit la taille de la police à 40 pixels */
+    max-width: 100%;
+    width: 250px; /* Permet à la largeur de s'ajuster en fonction du contenu */
+    /* display: flex; */ /* Mis en commentaire, non utilisé */
+    
+}
+
+.card-content p {
+    font-size: 20px;
+    max-width: 400px; 
+    color: #fff;
+    margin-bottom: 20px; 
+    text-align: justify;
+    line-height: 1.5;
+    width: auto;
+}
+
+.card-content button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    max-width: 800px; 
+    color: #dd7a7a;
+    background-color: #d16324;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+   
+}
+
+
+.card-content button:hover {
+    background-color: #da824700;
+    border-radius: 10px;
+    color: #e46319;
+    border: 2px solid #e46319;
+}
+
+.card-content a {
+    text-decoration: none;
+    /* color: #161e44; */
+    color: #fff;
+    
+}
+
+/*enchainement de vagues*/
+.card-entreprise {
+    width: 100%;
+    max-width: 35vw;
+    /* margin-bottom: 20px; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-entreprise-content {
+    margin: 10px;
+    padding: 0px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    width:500px;
+    max-width: 100%;
+}
+
+.card-entreprise-content h2 a {
+    margin: 0;
+    color: #fff;
+    background-color: #d16324;
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.card-entreprise-content h2 a:hover {
+    background-color: #da824700;
+    border-radius: 10px;
+    color: #e46319;
+    border: 2px solid #e46319;
+}
+
+.card-salaries {
+    width: 100%;
+    max-width: 30vw;
+    /* margin-bottom: 20px; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card-salaries-content {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.card-salaries-content h2 a {
+    color: #fff;
+    background-color: #d16324;
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.card-salaries-content h2 a:hover {
+    background-color: #da824700;
+    border-radius: 10px;
+    color: #e46319;
+    border: 2px solid #e46319;
+}
+
+
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+
+    /*Style de la page qui nous sommes*/
+ /* Style de la section Qui sommes-nous */
+.card-content-quiSommesNous-1 {
+    /* margin-inline: 20px; */
+    padding-inline: 50px;
+    
+    
+    /* margin: 20px; */
+    /* padding: 20px; */
+
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.card-content-quiSommesNous-1 {
+    /* margin-inline: 20px; */
+    padding-inline: 50px;
+    padding-top: 100px;
+    
+    /* margin: 20px; */
+    /* padding: 20px; */
+
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Style des images à l'intérieur de la section */
+.card-content-quiSommesNous-1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Style des titres */
+.card-content-quiSommesNous-1 h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+
+    text-decoration: underline 3px solid #b9773a;
+}
+
+/* Style des paragraphes */
+.card-content-quiSommesNous-1 p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 100px;
+    margin-left: 350px;
+
+    text-align: justify;
+    
+   
+    width: 900px;
+}
+
+
+
+
+
+
+
+/*style pour la page vous_etes_salaries*/
+/* Style de la carte des informations sur les salariés */
+.card-salaries-infos {
+    /* margin: 20px; */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: auto; /* Ajustez la largeur selon vos besoins */
+    overflow: hidden; /* Empêche le contenu de déborder */
+
+    position: relative;
+}
+
+/*img_accueil_card-salaries-infos*/
+
+.card-salaries-infos img {
+    max-width: 100%;
+
+    width: 100%;
+    height: 400px;
+    max-height: 400px;
+
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-top: 77px;
+
+    display: block;
+}
+
+.title-on-image {
+    position: absolute;
+    max-width: 100%;
+    width: 600px;
+    /* display: flex; */
+    /* justify-content: center;
+    text-align: center; */
+    /* height: auto; */
+    /* padding: 200px; */
+    
+     top: 10%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: -2px 0px 0px  rgb(231, 109, 27);
+    font-size: 70px;
+    text-align: center;
+    z-index: 1; /* Assure que le titre est placé au-dessus de l'image */
+}
+/*pour la page qui sommenous*/
+.title-on-image_bis {
+    position: absolute;
+    max-width: 100%;
+    width: 600px;
+    /* display: flex; */
+    /* justify-content: center;
+    text-align: center; */
+    /* height: auto; */
+    /* padding: 200px; */
+    
+     top: 30%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: -2px 0px 0px  rgb(231, 109, 27);
+    font-size: 70px;
+    text-align: center;
+    z-index: 1; /* Assure que le titre est placé au-dessus de l'image */
+}
+
+/* Style de l'image */
+.card-content-salaries-infos img {
+    max-width: 100%;
+    height: 400px;
+    
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    
+    width: 800px;
+    margin: auto;
+}
+
+
+/* Style du contenu de la carte */
+.card-content-salaries-infos {
+    text-align: center;
+}
+
+/* Style des titres */
+.card-content-salaries-infos h2 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+
+    text-decoration: underline 3px solid #b9773a;
+    
+}
+
+/* Style des paragraphes */
+.card-content-salaries-infos p {
+    font-size: 30px;
+    color: #666;
+    line-height: 1.5;
+    /* margin-bottom: 0px; */
+    text-align: justify;
+    max-width: 100%;
+    
+    margin:0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 800px;
+}
+
+/* Style du bouton */
+.card-content-salaries-infos button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    margin-block: 50px;
+}
+
+/* Style du lien dans le bouton */
+.card-content-salaries-infos button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Media query pour le menu mobile */
+@media (max-width: 900px) {
+    
+/* Style pour le corps de la page */
+body {
+    height:auto;
+    margin: 0;
+    padding-top: 0px;
+    background-color: #f2f2f2;
+    /* height: 400vw; */
+    /* max-height: 100px; */
+}
+
+    header {
+        width: 100%; /* Le header occupera toute la largeur de l'écran */
+    
+        position: fixed;
+        font-family: "Syne", sans-serif;
+        /* font-weight: 200px; */
+        background-color: #e9edf1;
+        padding: 15px 40px;
+        padding-inline: 50px;
+       
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2; /* Assurez-vous que la barre de navigation est au-dessus du reste du contenu */
+    }
+
+    .header_h img {
+        max-width: 100px;
+    }
+
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    .navbar {
+        display: none;
+        text-align: center;
+        margin-inline: 50px;
+        padding-inline: 50px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        width: 90%;
+        top: 30%;
+        left: -7%;
+        transform: translateY(-50%);
+        background-color: #f5f1f0c4;
+        color: #070707;
+        height: 200px;
+        box-shadow: 1px 1px 50px rgba(1, 1, 1, 0.07);
+       
+    }
+    
+    ul{
+    margin-block: 100px;
+    }
+    li{
+        /* margin-inline: 20px; */
+        margin-block: 20px;
+    }
+
+     /* dropdown-options */
+     .custom-dropdown {
+        cursor: pointer;
+        position: relative;
+        color: #f16e17;
+        position: relative;
+        /* margin-block: 10px; Espacement entre les éléments */
+        /* margin-right: 25px; */
+    }
+    
+    .dropdown-header {
+        cursor: pointer;
+    }
+    .dropdown-header:hover {
+        /* font-weight:600; */
+        
+        color: #a74e12;
+        border-bottom: 3px solid #a74e12; /* Épaissir la ligne au survol */
+    }
+    
+    .dropdown-options {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        width: 190px;
+        height: 200px;
+        top: 100%;
+        left: 0;
+        /* z-index: 1000; */
+        display: none;
+        
+        list-style-type: none;
+        padding: 0;
+        margin-left:80px;
+        border-top: none;
+        border-radius: 0 10px 10px 10px;
+        background-color: #ffffffab;
+    }
+    
+    .custom-dropdown:hover .dropdown-options {
+        display: block;
+    }
+    
+    .dropdown-options li {
+        margin: 0;
+        padding: 10px;
+       
+    }
+    
+    .dropdown-options li:hover {
+        /* background-color: #f16e175b; */
+        /* width: 190px; */
+        width: auto;
+        border-bottom: 3px solid #a74e12; /* Épaissir la ligne au survol */
+        margin: 0;
+        color:#a74e12 ; 
+        margin-block: 10px;
+        
+    }
+
+     /* Style pour le bloc de connexion  */
+     #Connexion-form {
+        height: auto;
+        width: auto;
+        margin: 80px auto;
+
+        padding-inline: 30px;
+        background-color: rgba(255, 255, 255, 0.665);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style pour le formulaire */
+    #inscription-form {
+        height: auto;
+        width: auto;
+        margin: 200px auto;
+        /* padding: auto; */
+        padding-inline: 30px;
+        background-color: rgba(255, 255, 255, 0.665);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+    }
+    
+    .card_inscription_connexion img {
+            margin-top: 77px;
+            width: 100%;
+            max-width: 100%;
+            display: block;
+            height: 1000px;
+        }
+     
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"] {
+           width: 250px;
+          
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #dd6c21b0; 
+            border-radius: 5px;
+            box-sizing: border-box;
+        
+            
+        
+        }
+        
+        input[type="submit"] {
+            width: 75%;
+            padding: 10px;
+            /* margin-inline: 108px ; */
+            margin: 0 auto; /* cela va centrer horizontalement */
+            display: block; /* assurez-vous qu'il occupe toute la largeur disponible */
+            
+        
+            font-family: "Syne", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600px;
+            font-style: normal;
+        
+            border: none;
+            border-radius: 5px;
+            background-color: #db6414c2;
+            color: #0e1044ad;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    
+   
+
+
+/*Style de la page AccueilFlow*/
+/*Style des paragraphes "cartes"*/
+
+.card {
+    margin-top: 0px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* position: relative; */
+}
+
+    .card img {
+        margin-top: 80px;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+
+    .card_2{
+        display: flex;
+        justify-content:space-between;
+        padding-inline: 0px;
+        
+    }
+
+    .card-content {
+        margin-top: 99px; /* Réduire la marge supérieure du contenu */
+       
+        /* width: 100%;  */
+        /* max-width: none;  */
+        width: 100vw; /* Utilisation de 80% de la largeur de la vue */
+       max-width: 800px; /*Limiter la largeur maximale à 600 pixels */
+       padding-inline: 30px;
+        
+    }
+
+    .card-content h1 {
+        margin-top: 0px;
+        margin-bottom: 0;
+        font-size: 30px; /* Réduire la taille de la police */
+        width: auto;
+        justify-content: center;
+    text-align: center;
+    position: relative;
+        
+    }
+
+    .card-content h2{
+        margin-top: 0px;
+color: #fff;
+        margin-right: 10px;
+        line-height: 2; /* Espace entre les lignes */
+        text-shadow: -1px 0px 0px  rgb(231, 109, 27);
+        font-size: 20px;
+        
+        display: flex;
+    }
+
+    .card-content p {
+        font-size: 15px; /* Réduire la taille de la police */
+       /* margin-right: 200px; */
+        
+    }
+
+    .card-content button {
+        margin-top: 10px;
+        margin-bottom: 0px; /* Réduire la marge inférieure */
+        padding: 8px 16px; /* Réduire le rembourrage */
+        font-size: 12px; /* Réduire la taille de la police */
+        display: flex;
+        margin-left: 0;
+    }
+
+
+    /**//*page AccueilFlow les boutons Entreprise et salaries*/
+
+    .card-entreprise {
+        width: 200px;
+        max-width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    
+    .card-entreprise-content {
+        padding: 0px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        width: 210px;
+        max-width: 100%;
+    }
+    
+    .card-entreprise-content h2 a {
+        margin: 0;
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 5px;
+       
+    }
+    
+    .card-entreprise-content h2 a:hover {
+        color: #0a0a0a;
+    }
+    
+    .card-salaries {
+        width: 100%;
+        max-width: 80vw;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .card-salaries-content {
+        padding: 10px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        width: 160px;
+        max-width: 100%;
+    }
+    
+    .card-salaries-content h2 a {
+        margin: 0;
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 5px;
+    }
+    
+    .card-salaries-content h2 a:hover {
+        color: #0a0a0a;
+    }
+    
+    .etp-sala{
+        display: flex;
+        justify-content:space-between;
+        padding-inline: 0px;
+    }
+   
+
+    
+    /* Autres styles... */
+    /*style pour la page vous_etes_salaries ?*/
+    /*img_accueil_card-salaries-infos*/
+    
+    .card-salaries-infos img {
+        display: block;
+        width: 100%; /* Permettre à l'image de conserver son ratio d'aspect */
+        max-width: 100%; /* Limiter la largeur de l'image au maximum disponible */
+        height: auto; /* Permettre à l'image de conserver son ratio d'aspect */
+        margin: 0 auto; /* Centrer l'image horizontalement */
+        border-radius: 5px;
+        
+    } 
+    
+    .title-on-image {
+
+        position: absolute;
+    
+        
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-shadow: -2px 0px 0px  rgb(231, 109, 27);
+        font-size: 7vw; /* Taille de la police relative à la largeur de la vue */
+        text-align: center;
+        z-index: 1; /* Assure que le titre est placé au-dessus de l'image */
+}
+    /*pour la page qui sommenous*/
+    .title-on-image_bis {
+
+        position: absolute;
+    
+        
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-shadow: -2px 0px 0px  rgb(231, 109, 27);
+        font-size: 7vw; /* Taille de la police relative à la largeur de la vue */
+        text-align: center;
+        z-index: 1; /* Assure que le titre est placé au-dessus de l'image */
+}
+
+
+/* Style de l'image */
+.card-content-salaries-infos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    width: 800px; 
+} 
+
+
+/* Style du contenu de la carte */
+.card-content-salaries-infos {
+    text-align: center;
+} 
+
+/* Style des titres */
+.card-content-salaries-infos h2 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+
+    text-decoration: underline 3px solid #b9773a;
+    max-width: 100%;
+}
+
+/* Style des paragraphes */
+.card-content-salaries-infos p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+   
+    text-align: justify; 
+    max-width: 100%; 
+    margin: 0 auto;  /* Centrer le paragraphe */
+    padding: 0 10px;  /* Ajouter un peu d'espacement sur les côtés */ 
+    box-sizing: border-box;  /* Assure que la largeur du paragraphe inclut la largeur du padding */
+    
+    
+    width: 800px; 
+} 
+}
+
+
+

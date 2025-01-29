@@ -1,0 +1,957 @@
+/* Style global */
+body{
+    font-family: 'Sacramento', cursive, sans-serif;
+    font-size: 16px;
+ 
+    position: relative;
+    /* margin-top: 80px ; */
+    /* margin-bottom: 50px; */
+    /* height:100vh; */
+    width: 100%;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 0%;
+    /* margin-inline: 0; */
+    padding-top: 80px;
+}
+
+/* html{
+    margin-bottom: 50px;
+} */
+
+.container{
+    background-color: transparent;
+    /* margin: 35px 0 0px 0 ; */
+    /* padding: 35px 35px  90px 35px ; */
+    /* width: 80%; */
+    height: auto;
+    /* background-color: #917a6f; */
+    width: 90%;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    
+    
+}
+
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* header .header_h img {
+    width: 120px;
+} */
+
+.btn_log_h {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn_log_h a {
+    /* color: rgb(222, 125, 39);
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bolder; */
+
+    text-decoration: none;
+    color: #ef7a4c; /* Change text color */
+    font-size: 10px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column; /* Icon and text stacked vertically */
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    /* background-color: #f0f0f0; */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn_log_h a:hover {
+    text-decoration: none; 
+    border-bottom: 3px solid #ef7a4c; 
+    padding-bottom: 2px;
+}
+
+.btn_log_h a span{
+    font-size: 20px;
+    text-align: center;
+    display: block; 
+    margin: 0px auto 0px auto; 
+    text-decoration: none;
+
+
+}
+.logout-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logout-button a {
+    /* color: rgb(222, 125, 39);
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bolder; */
+
+    text-decoration: none;
+    color: #ef7a4c; /* Change text color */
+    font-size: 10px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column; /* Icon and text stacked vertically */
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    /* background-color: #f0f0f0; */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button a:hover {
+    text-decoration: none; 
+    border-bottom: 3px solid #ef7a4c; 
+    padding-bottom: 2px;
+}
+
+.logout-button a span{
+    font-size: 20px;
+    text-align: center;
+    display: block; 
+    margin: 0px auto 0px auto; 
+    text-decoration: none;
+
+
+}
+.logout-button a .icon:hover{
+    text-decoration: none;
+}
+/* Style du titre */
+/* .titre_de_page h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-top: 50px;
+} */
+ 
+
+.question h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.question input[type="radio"] {
+    margin-right: 10px;
+
+   
+}
+
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e1e0de; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 20px 5px 20px;  
+    margin: 0px;  
+}
+
+/**Menu burger**/
+.mobile-menu {
+    width: 100%;
+    font-size: 30px;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    z-index: 9999;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.menu .logo {
+    width: 105px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    text-align: right;
+    list-style: none;
+    padding: 0px 0px;
+    margin-bottom: 0;
+}
+
+
+
+/**FOOTER**/
+
+
+.footer {
+    background-color: #917a6f; 
+    color: #333; 
+    text-align: center;
+    padding: 20px  ; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px; 
+    border-top: 1px solid #ddd; 
+    left: 0;
+  }
+  .footer p {
+    margin-bottom: 0;
+  }
+
+
+/** MODE SOMBRE **/
+    /*Bouton*/
+
+    #theme-toggle {
+        position: fixed;
+        font-size: 20px ;
+        bottom: 7px;
+        right: 10px;
+        padding: 10px 10px;
+        background-color: #00000004;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000; 
+    }
+    
+    #theme-toggle:hover {
+        background-color: #333;
+    }
+
+/* Mode sombre */
+/* .dark-mode nav ul{
+    background-color: #e4e3e1;
+} */
+ /* .dark-mode a {
+    background-color: #e4e3e1;
+ } */
+.dark-mode {
+    background-color: #000;
+}
+.dark-mode a{
+    background-color: transparent;
+}
+
+
+.dark-mode .container{
+    background-color: #000;
+}
+.dark-mode h1{
+    background-color: #000;
+    color: #fff;
+}
+.dark-mode tbody{
+    background-color: #000;
+}
+.dark-mode td{
+    background-color: #21211f;
+    color: #fff;
+}
+.dark-mode tbody tr:nth-child(even) td{
+    background-color: #2e2e2cd6;
+    color: #fff;
+    
+}
+.dark-mode fieldset {
+    background-color: #000;
+}
+.dark-mode tbody tr:nth-child(even) td {
+    background-color: #2b2b2c; /* Lignes paires */
+}
+
+.dark-mode tbody tr:hover td {
+    background-color: #525354; /* Survol des lignes */
+}
+
+.dark-mode tbody tr td {
+    text-align: center; /* Pour centrer le contenu des cellules */
+    background-color: #141414;
+}
+
+/* fin du mode sombre*/
+
+
+
+/* Styles globaux pour les messages */
+.message {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-out;
+    opacity: 0.9;
+}
+
+/* Style pour les messages de succès */
+.message-success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    text-align: center;
+    width: fit-content;
+    margin: 0px auto 25px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+/* Style pour les messages de succès */
+.message-failur {
+    background-color: #edd4d4;
+    border: 1px solid #e6c3c3;
+    color: #571515;
+    text-align: center;
+    width: fit-content;
+    margin: 0px auto 25px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+/* Style pour les messages d'avertissement */
+.message.warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+}
+
+/* Style pour les messages d'erreur */
+.message.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Animation lors de l'affichage des messages */
+.message {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.9;
+    }
+}
+
+
+/* Navigation Styles */
+.nav-tache {
+    /* background-color: #2c3e50; 
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px; */
+
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    
+}
+
+.nav-tache ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-tache li {
+    margin-right: 20px;
+}
+
+.nav-tache a {
+    text-decoration: none;
+    color: #ecf0f1; /* Texte blanc */
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.nav-tache a i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.nav-tache a:hover {
+    color: #1abc9c; /* Changement de couleur au survol */
+}
+
+/* Fieldset and Table Styles */
+fieldset {
+
+    position: relative;
+
+    border: 1px solid #dcdcdc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    height: 470px;
+    border-radius: 10px;
+}
+
+fieldset h1 {
+    font-size: 28px;
+    /* margin-bottom: 20px; */
+    color: #2c3e50;
+    text-align: center;
+    font-weight: bold;
+
+    position: sticky;
+    top: 0;
+    background-color: white; /* Pour que le texte ne soit pas caché par le contenu qui défile */
+    z-index: 10;
+    padding: 10px;
+    margin: 0;
+}
+
+
+thead th {
+    background-color: #2c3e50;
+    color: #fff;
+    position: sticky; /* Rend l'en-tête sticky */
+    top: 0; /* En-tête reste collé en haut */
+    z-index: 10; /* S'assure que l'en-tête reste au-dessus du contenu */
+    text-align: center;
+}
+
+/* Ajustement de la largeur de chaque colonne */
+th:nth-child(1) { width: 3%; } /* N° */
+th:nth-child(2) { width: 3%; } /* ID */
+th:nth-child(3) { width: 10%; } /* Titre */
+th:nth-child(4) { width: 40%; } /* Description */
+th:nth-child(5) { width: 12%; } /* Date de création */
+th:nth-child(6) { width: 10%; } /* Date limite */
+th:nth-child(7) { width: 8%; } /* Statut */
+th:nth-child(8) { width: 11%; }
+
+.table-container {
+    width: 100%; 
+    height: 450px; 
+    padding: 0;
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+}
+
+
+table {
+    width: 100%;
+    height: 400px;
+    border-collapse: collapse;
+    /* margin-top: 20px; */
+    background-color: #fff;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+tbody {
+    display: block;
+    max-height: 390px; /* Limite la hauteur du tableau pour permettre le défilement */
+    overflow-y: auto; /* Barre de défilement verticale */
+    padding-bottom: 20px;
+    
+}
+
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* Fixe la largeur des colonnes */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+tbody tr td {
+    text-align: center; /* Pour centrer le contenu des cellules */
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #e9ecef; /* Lignes paires */
+}
+
+tbody tr:hover td {
+    background-color: #d6e9ff; /* Survol des lignes */
+}
+
+/* Ajustement de la largeur de chaque cellule */
+tbody td:nth-child(1) { width: 3%; } /* N° */
+tbody td:nth-child(2) { width: 3%; } /* ID */
+tbody td:nth-child(3) { width: 10%; } /* Titre */
+tbody td:nth-child(4) { width: 40%; } /* Description */
+tbody td:nth-child(5) { width: 17%; } /* Date de création */
+tbody td:nth-child(6) { width: 7%; } /* Date limite */
+tbody td:nth-child(7) { width: 11%; } /* Statut */
+/* tbody td:nth-child(8) { width: 10%; } Action */
+
+
+tr {
+    position: sticky;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.thead-container{
+    max-height: 400px; 
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+/* thead {
+    background-color: #2c3e50;
+    color: #fff;
+} */
+
+thead th {
+    background-color: #2c3e50;
+    color: #fff;
+    position: sticky;
+    top: 40; 
+    z-index: 109; 
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+th {
+    font-weight: 600;
+    background-color: #2c3e50;
+    color: #fff;
+    border-bottom: 2px solid #2c3e50;
+}
+
+td {
+    background-color: #f8f9fa;
+}
+
+tr:nth-child(even) td {
+    background-color: #e9ecef; /* Lignes paires */
+}
+
+tr:hover td {
+    background-color: #d6e9ff; /* Survol des lignes */
+}
+
+/* Button Styles */
+
+.action-button{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    
+}
+
+button {
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: flex-start;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.btn-modifier {
+    background-color: #d29739;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.btn-modifier:hover {
+    background-color: #b8942a;
+    transform: scale(1.05); /* Légère augmentation de la taille */
+}
+
+.btn-supprimer {
+    background-color: #db6b76;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.btn-supprimer:hover {
+    background-color: #c73d4b;
+    transform: scale(1.05); /* Légère augmentation de la taille */
+}
+table tr th{
+    text-align: center;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+
+    body {
+        position: relative;
+        /* margin-top: 0px; */
+        /* height:100vh; */
+        width: 100%;
+        background-color: #917a6f;
+        background-size: 400%;
+        background-repeat: no-repeat;
+        background-position: right;
+        padding: 0px;
+     }
+
+    .header{
+padding: 10px 10px 5px 15px;
+    }
+
+    header .header_h img{
+        width: 90px;
+    }
+
+    .btn_log_h {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+
+    .questionnaire {
+        padding: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh; 
+        box-sizing: border-box;
+        padding: 100px 0px 0px 0px;
+        background-color: #e1e0dee8; 
+        gap:150px;
+        display: none;
+    }
+
+    .menu.active{
+        display: flex;
+    }
+    
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 100px;
+        gap: 40px;
+       
+      
+    }
+.container{
+    margin:  75px 0 0 0 ;
+    height: auto;
+    padding: 35px 0px  90px 0px ;
+    width: 90%;
+
+    }
+
+            .mobile-menu {    
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                position: fixed; 
+                right: 30px;
+                width: 50px; 
+                height: 50px; 
+                font-size: 30px; 
+                padding: 30px 0px 0 0 ; 
+                color: rgb(206, 24, 24); 
+                border-radius: 50%; 
+                z-index: 9999; 
+                cursor: pointer; 
+                box-sizing: border-box; 
+            }
+            
+            .menu.active{
+                display: flex;
+            }
+            
+            .menu .logo {
+        
+        margin: 0px auto;
+        width: 150px;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        display: block;
+    }
+    
+    .btn_log_h a {
+        color: #ef7a4c; /* Change text color */
+        font-size: 20px;
+        padding: 5px;
+        margin:  auto 0px auto;
+    }
+    .btn_log_h a span{
+        font-size:25px;
+    }
+    .logout-button a {
+        font-size: 20px;
+        margin:  auto 0px auto;
+    }
+    .logout-button a span{
+        font-size: 25px;
+        margin: 0px auto 0px auto;
+    }
+    
+    footer.footer {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        padding: 20px 10px;
+        background-color: #917a6f;
+        color: #333;
+        text-align: center;
+    }
+    
+    .footer p {
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    
+    #theme-toggle {
+        position: fixed;
+        font-size: 20px ;
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 10px;
+        background-color: #00000004;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000; 
+    }
+    
+    #theme-toggle:hover {
+        background-color: #333;
+    }
+    
+    .nav-tache ul{
+        gap: 10px;
+    }
+    
+    fieldset h1{
+        top: 110px;
+        font-size: 20px;
+        
+    }
+    thead th {
+        margin-top: 50px;
+        text-align: center;
+        
+    }
+    
+    tbody{
+        margin-top: 0px;
+        max-height: 590px;
+        
+    }
+    
+    thead th {
+        background-color: #2c3e50;
+        color: #fff;
+        position: sticky; /* Rend l'en-tête sticky */
+        top: 0px; /* En-tête reste collé en haut */
+        z-index: 10; /* S'assure que l'en-tête reste au-dessus du contenu */
+        text-align: center;
+        
+        font-size: 10px;
+    }
+    
+    /* Ajustement de la largeur de chaque colonne */
+    th:nth-child(1) { width: 5%; } /* N° */
+    th:nth-child(2) { width: 5%; } /* ID */
+    th:nth-child(3) { width: 10%; } /* Titre */
+    th:nth-child(4) { width: 35%; } /* Description */
+    th:nth-child(5) { width: 20%; } /* Date de création */
+    th:nth-child(6) { width: 11%; } /* Date limite */
+    th:nth-child(7) { width: 11%; } /* Statut */
+    th:nth-child(8) { width: 10%; }
+    
+    /* Ajustement de la largeur de chaque cellule */
+    tbody td:nth-child(1) { width: 5%; } /* N° */
+    tbody td:nth-child(2) { width: 5%; } /* ID */
+    tbody td:nth-child(3) { width: 10%; padding: 5px;} /* Titre */
+    tbody td:nth-child(4) { width: 33%; } /* Description */
+    tbody td:nth-child(5) { width: 15%; } /* Date de création */
+    tbody td:nth-child(6) { width: 13%; } /* Date limite */
+    tbody td:nth-child(7) { width: 10%; } /* Statut */
+    
+    tbody td{
+        word-wrap: break-word; /* Force le texte à se plier */
+        overflow-wrap: break-word; /* Alternative pour plus de compatibilité */
+        padding: 0px; 
+        font-size: 8px; /* Réduisez la taille de la police si nécessaire */
+        
+    }
+
+    tbody td:hover{
+        font-size: 15px;
+        width: 100px;
+    }
+    
+    
+    fieldset{
+        top: 40px;
+    }
+    
+    fieldset h1 {
+        font-size: 20px;
+        color: #2c3e50;
+        text-align: center;
+        font-weight: bold;
+        
+        position: sticky;
+        top: 0px;
+        background-color: white; 
+        z-index: 10;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        padding-right: 0 !important; /* Supprimer padding à droite */
+        padding-left: 0 !important;  /* Supprimer padding à gauche */
+    }
+
+    .btn_log_h {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn-modifier {
+        /* background-color: #d29739;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 0px; */
+        padding: 5px;
+        width: 25px;
+    }
+    /* .btn-modifier:hover{
+
+    } */
+
+    .action-button:hover{
+       
+        width: 35px;
+    }
+
+    .btn-supprimer {
+        /* background-color: #db6b76;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 0px; */
+        padding: 5px;
+        width: 25px;
+    }
+    .action-button .btn-text {
+        display: none;
+    }
+
+    .container{
+        height: 500px;
+    }
+    .table-container {
+        width: 100%; 
+        height: 800px; 
+        padding: 0;
+        overflow-y: scroll; 
+        overflow-x: hidden; 
+        overflow-y: visible; 
+    }
+    fieldset{
+        height: 660px;
+    }
+
+    
+}
+    
+    
