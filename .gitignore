@@ -1,3 +1,9 @@
 conf/
-inscriptionCtrl copy.php
+controllers/inscriptionCtrl copy.php
+icons/
+images/
+simulations/
+vendor/
+logo/
+
 
